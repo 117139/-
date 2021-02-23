@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首航</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+		 id="viewport">
+		 
+		 <link href="./css/slick.css" rel="stylesheet" type="text/css">
+		 <link href="./css/slick-theme.css" rel="stylesheet" type="text/css">
+		 
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<!-- 手机端 -->
+		<link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width:1198px)" />
+		<link rel="stylesheet" href="./css/index_su.css">
+		<script type="text/javascript" src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<!-- 手机菜单 -->
+		<div class="m_nav" id="m_nav" style="display: none;">
+			<ul id="menu">
+				<li><a href="index.html">首页</a></li>
+				<li class="cur" id="m_nav_about">
+					<a href="about.html">关于我们 <img  src="images/m_more.png" /></a>
+					<div id="m_nav_in" style="display: none;">
+						<a href="about.html#A1">公司介绍</a>
+						<a href="about.html#A2">公司大事件</a>
+						<a href="about.html#A3">知识产权</a>
+						<a href="about.html#A4">信息安全</a>
+						<a href="about.html#A5">合作伙伴</a>
+					</div>
+					
+				</li>
+				<li><a href="kjfn.html">科技赋能</a></li>
+				<li><a href="my_fw.html">我们的服务</a></li>
+				<li><a href="zxns.html">招贤纳士</a></li>
+				<li><a href="lxwm.html">联系我们</a></li>
+			</ul>
+		</div>
+		<div class="shade" id="shade" style="display: none;">
+		</div>
+	<!-- ····················手机菜单 -->
+		
+		<div class="header center">
+			<!-- 导航 -->
+			
+			<div class="nav">
+				<ul>
+					<h1 class="logo"><a href="index.html" target="_top">&nbsp;&nbsp;<img src="images/logo.png"></a></h1>
+					<li><a href="index.html" target="_blank">首页</a></li>
+					<li class="cur" onmouseover="about_show('nav_in')" onmouseout="about_hidden('nav_in')" >
+						<a href="about.html" target="_blank" id="tab_about">关于我们</a>
+						<!-- 二级导航 -->
+									<div id="nav_in">
+										<a href="about.html#A1">公司介绍</a>
+										<a href="about.html#A2">公司大事件</a>
+										<a href="about.html#A3">知识产权</a>
+										<a href="about.html#A4">信息安全</a>
+										<a href="about.html#A5">合作伙伴</a>
+									</div>
+					</li>
+					<li><a href="kjfn.html" target="_blank">科技赋能</a></li>
+					<li><a href="my_fw.html" target="_blank">我们的服务</a></li>
+					<li><a href="zxns.html" target="_blank">招贤纳士</a></li>
+					<li><a href="lxwm.html" target="_blank">联系我们</a></li>
+				</ul>
+				<!-- mobile -->
+				<p class="m_icon" id="m_icon">
+					<a href="#">
+						<img src="images/icon.png">
+					</a>
+				</p>
+			</div>
+			<!-- =======导航-->
+		</div>
+		<div id="wrap">
+			<div class="banner_su" style="background-image: url(images/lxwm_02.jpg);"></div>
+			<div class="lxwm_box w1200">
+				<div class="lxwm_box_tabs dis_flex ju_c ais">
+					<a class="lxwm_box_tabs_li dis_flex aic" :class="cur==0?'cur':''" onclick="setcur(0)">服务通道</a>
+					<a class="lxwm_box_tabs_li dis_flex aic" :class="cur==1?'cur':''" onclick="setcur(1)">联系方式</a>
+				</div>
+				<div id="fw" class="fwtd_tit dis_flex aic ju_c">
+					服务通道
+				</div>
+				<div class="fwlist dis_flex ju_a">
+					<div class="fwli">
+						<img class="fwli_img" src="images/lxwm_05.jpg" >
+						<p class="fwli_p">反馈中心</p>
+						<div style="font-size: 12px;color: #666;">	我们将在1-2个工作日内处理，感谢您的支持</div>
+					</div>
+					<div class="fwli">
+						<img class="fwli_img" src="images/lxwm_07.jpg" >
+						<p class="fwli_p">热线电话</p>
+						<div class="fwli_tel">
+							总计：010-68016922
+							<br>传真：68011950
+							<br>网址：www.cfchina.com.cn
+						</div>
+					</div>
+				</div>
+				
+				<div id="lxfs" class="fwtd_tit dis_flex aic ju_c">
+					联系方式
+				</div>
+				<div class="b_map" style="background-image: url(images/lxwm_12.jpg);"></div>
+				<div class="lxwm_type">
+					http://www.cfchina.com.cn/
+					<br>邮编：100037
+					<br>总计：010-68016922
+					<br>传真：68011950
+					<br>网址：www.cfchina.com.cn
+				</div>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<br />
+			Copyright @ 2008 China Rapid Finance All richt reserved.<br /><br />版权所有︰北京首航财务管理顾问有限公司
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/slick.js"></script>
+<script src="js/public_su.js"></script>
+<script type="text/javascript">
+	
+	var vm = new Vue({
+		el: "#wrap",
+		data: {
+			cur: 0,
+		},
+		created: function() {
+	
+		},
+		mounted: function() {
+	
+		},
+		methods: {
+	
+		}
+	});
+	
+	function setcur(num){
+		// alert(num)
+		vm.cur=num
+		if(num==0){
+			window.location.href="#fw"
+		}
+		if(num==1){
+			window.location.href="#lxfs"
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+		$("#m_icon").click(function(){
+			// $("#m_nav").show();
+			// $("#shade").show();	
+			$("#m_nav").toggle();
+			$("#shade").toggle();
+		})
+		
+		$("#shade").click(function(){
+			$("#m_nav").hide();
+			$("#shade").hide();
+		});	
+		
+		// 手机端二级菜单
+		$(function(){
+			// banner
+			$('.single-item').slick({
+				dots: true,
+				speed: 500,
+				arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 3000
+			});
+			
+			$("#menu li").click(function(){
+				$(this).children("#m_nav_in").toggle()
+				// $(this).children("#m_nav_in").show();
+				// $(this).children("#m_nav_in").hide();	
+			})		   
+		})	
+	
+	// 导航
+	function about_show(elementId){
+			document.getElementById("tab_about").style.background="#0858A5";
+			document.getElementById("tab_about").style.color="white";
+			document.getElementById(elementId).style.display="block";
+	}
+	function about_hidden(elementId){
+			document.getElementById("tab_about").style.background="white";
+			document.getElementById("tab_about").style.color="#333333";
+		document.getElementById(elementId).style.display="none";			
+	}
+	//============= 导航
+</script>

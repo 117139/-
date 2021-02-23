@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首航</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+		 id="viewport">
+
+		<link href="./css/slick.css" rel="stylesheet" type="text/css">
+		<link href="./css/slick-theme.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<!-- 手机端 -->
+		<link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width:1198px)" />
+		<link rel="stylesheet" href="./css/index_su.css">
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/layer/layer.js"></script>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<!-- 手机菜单 -->
+		<div class="m_nav" id="m_nav" style="display: none;">
+			<ul id="menu">
+				<li><a href="index.html">首页</a></li>
+				<li id="m_nav_about">
+					<a href="about.html">关于我们 <img src="images/m_more.png" /></a>
+					<div id="m_nav_in" style="display: none;">
+						<a href="about.html#A1">公司介绍</a>
+						<a href="about.html#A2">公司大事件</a>
+						<a href="about.html#A3">知识产权</a>
+						<a href="about.html#A4">信息安全</a>
+						<a href="about.html#A5">合作伙伴</a>
+					</div>
+
+				</li>
+				<li><a href="kjfn.html">科技赋能</a></li>
+				<li><a href="my_fw.html">我们的服务</a></li>
+				<li><a href="zxns.html">招贤纳士</a></li>
+				<li class="cur"><a href="lxwm.html">联系我们</a></li>
+			</ul>
+		</div>
+		<div class="shade" id="shade" style="display: none;">
+		</div>
+		<!-- ····················手机菜单 -->
+
+		<div class="header center">
+			<!-- 导航 -->
+
+			<div class="nav">
+				<ul>
+					<h1 class="logo"><a href="index.html" target="_top">&nbsp;&nbsp;<img src="images/logo.png"></a></h1>
+					<li><a href="index.html" target="_blank">首页</a></li>
+					<li onmouseover="about_show('nav_in')" onmouseout="about_hidden('nav_in')"><a href="about.html" target="_blank" id="tab_about">关于我们</a>
+						<!-- 二级导航 -->
+						<div id="nav_in">
+							<a href="about.html#A1">公司介绍</a>
+							<a href="about.html#A2">公司大事件</a>
+							<a href="about.html#A3">知识产权</a>
+							<a href="about.html#A4">信息安全</a>
+							<a href="about.html#A5">合作伙伴</a>
+						</div>
+					</li>
+					<li><a href="kjfn.html" target="_blank">科技赋能</a></li>
+					<li><a href="my_fw.html" target="_blank">我们的服务</a></li>
+					<li><a href="zxns.html" target="_blank">招贤纳士</a></li>
+					<li class="cur"><a href="lxwm.html" target="_blank">联系我们</a></li>
+				</ul>
+				<!-- mobile -->
+				<p class="m_icon" id="m_icon">
+					<a href="#">
+						<img src="images/icon.png">
+					</a>
+				</p>
+			</div>
+			<!-- =======导航-->
+		</div>
+		<div id="wrap">
+			<div class="banner_su" style="background-image: url(images/lxwm_02.jpg);"></div>
+			<div class="lxwm_box w1200">
+				<div class="lxwm_box_tabs dis_flex ju_c ais">
+					<a class="lxwm_box_tabs_li dis_flex aic" :class="cur==0?'cur':''" href="lxwm.html#fw">服务通道</a>
+					<a class="lxwm_box_tabs_li dis_flex aic" :class="cur==1?'cur':''" href="lxwm.html#lxfs">联系方式</a>
+					<a class="lxfs_back" href="javascript:history.go(-1);">
+						<返回上一级</a> </div> <div id="fw" class="fwtd_tit dis_flex aic ju_c">
+							服务通道
+				</div>
+				<form id="form" class="lxwm_fw_box">
+					<div class="lxwm_fw_box_li">
+						<div class="lxwm_fw_box_li_name">*1.您的称呼</div>
+						<input type="text" name="name" placeholder="请输入">
+					</div>
+					<div class="lxwm_fw_box_li">
+						<div class="lxwm_fw_box_li_name">*2.您的电话</div>
+						<input type="number" name="tel" placeholder="请输入">
+					</div>
+					<div class="lxwm_fw_box_li">
+						<div class="lxwm_fw_box_li_name">*3.单位名称</div>
+						<input type="text" name="gsname" placeholder="请输入">
+					</div>
+					<div class="lxwm_fw_box_li">
+						<div class="lxwm_fw_box_li_name">4.所属行业</div>
+						<input type="text" name="hangye" placeholder="请输入">
+					</div>
+					<div class="lxwm_fw_box_li">
+						<div class="lxwm_fw_box_li_name">5.企业规模</div>
+						<input type="text" name="guimo" placeholder="请输入">
+					</div>
+					<div class="lxwm_fw_box_li">
+						*6.对软件功能需求
+					</div>
+
+					<div class="lxwm_fw_box_li" style="flex-wrap: wrap;margin-top: 0;">
+						<label>
+							<input name="xuqiu" type="checkbox" value="授信审批">授信审批
+						</label>
+						<label>
+							<input name="xuqiu" type="checkbox" value="信贷核心业务管理">信贷核心业务管理
+						</label>
+						<label>
+							<input name="xuqiu" type="checkbox" value="额度管理">额度管理
+						</label>
+						<label>
+							<input name="xuqiu" type="checkbox" value="催收与不良资产处置">催收与不良资产处置
+						</label>
+						<label>
+							<input name="xuqiu" type="checkbox" value="辅助决策">辅助决策
+						</label>
+						<label>
+							<input name="xuqiu" type="checkbox" value="征信查询">征信查询
+						</label>
+						<label>
+							<input name="xuqiu" type="checkbox" value="实现统一权限认证">实现统一权限认证
+						</label>
+						<label>
+							<input name="xuqiu" type="checkbox" value="其他">其他
+						</label>
+					</div>
+
+					<div class="lxwm_fw_box_li">
+						*7.需求描述
+					</div>
+					<div class="lxwm_fw_box_li">
+						<textarea name="xq_content" class="lxwm_fw_box_content" placeholder="请输入内容"></textarea>
+					</div>
+					<div class="lxwm_fw_box_li">
+						8.需求预算范围
+					</div>
+					<div class="lxwm_fw_box_li" style="flex-wrap: wrap;margin-top: 0;">
+						<label>
+							<input name="xuqiu_ys" type="radio" value="50万以内">50万以内
+						</label>
+						<label>
+							<input name="xuqiu_ys" type="radio" value="50万~100万">50万~100万
+						</label>
+						<label>
+							<input name="xuqiu_ys" type="radio" value="100万~500万">100万~500万
+						</label>
+						<label>
+							<input name="xuqiu_ys" type="radio" value="500万~1000万">500万~1000万
+						</label>
+						<label>
+							<input name="xuqiu_ys" type="radio" value="1000万以上">1000万以上
+						</label>
+					</div>
+					<div class="lxwm_fw_box_li">
+						9.现有设备、系统、数据库情况
+					</div>
+					<div class="lxwm_fw_box_li">
+						<textarea name="xx_content" class="lxwm_fw_box_content" placeholder="请输入内容"></textarea>
+					</div>
+					<div class="lxwm_fw_box_li">
+						<!-- <button class="lxwm_fw_box_sub_btn" type="submit">提交</button> -->
+						<button class="lxwm_fw_box_sub_btn" type="button" @click="sub_fuc">提交</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<br />
+			Copyright @ 2008 China Rapid Finance All richt reserved.<br /><br />版权所有︰北京首航财务管理顾问有限公司
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/slick.js"></script>
+<script src="js/public_su.js"></script>
+<script type="text/javascript">
+	
+	var vm = new Vue({
+		el: "#wrap",
+		data: {
+			cur: 0,
+		},
+		created: function() {
+
+		},
+		mounted: function() {
+
+		},
+		methods: {
+
+		}
+	});
+	function sub_fuc(){
+		 var formObject = {};
+		        var formArray =$("#form").serializeArray();
+		        $.each(formArray,function(i,item){
+		            formObject[item.name] = item.value;
+		        });
+		console.log(formObject)
+		layer.msg('提交成功')
+	}
+	function setcur(num) {
+		// alert(num)
+		vm.cur = num
+		if (num == 0) {
+			window.location.href = "#fw"
+		}
+		if (num == 1) {
+			window.location.href = "#lxfs"
+		}
+	}
+
+
+
+
+
+
+
+	$("#m_icon").click(function() {
+		// $("#m_nav").show();
+		// $("#shade").show();	
+		$("#m_nav").toggle();
+		$("#shade").toggle();
+	})
+
+	$("#shade").click(function() {
+		$("#m_nav").hide();
+		$("#shade").hide();
+	});
+
+	// 手机端二级菜单
+	$(function() {
+		// banner
+		$('.single-item').slick({
+			dots: true,
+			speed: 500,
+			arrows: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 3000
+		});
+
+		$("#menu li").click(function() {
+			$(this).children("#m_nav_in").toggle()
+			// $(this).children("#m_nav_in").show();
+			// $(this).children("#m_nav_in").hide();	
+		})
+	})
+
+	// 导航
+	function about_show(elementId) {
+		document.getElementById("tab_about").style.background = "#0858A5";
+		document.getElementById("tab_about").style.color = "white";
+		document.getElementById(elementId).style.display = "block";
+	}
+
+	function about_hidden(elementId) {
+		document.getElementById("tab_about").style.background = "white";
+		document.getElementById("tab_about").style.color = "#333333";
+		document.getElementById(elementId).style.display = "none";
+	}
+	//============= 导航
+</script>

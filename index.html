@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首航</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+		 id="viewport">
+		 
+		 <link href="./css/slick.css" rel="stylesheet" type="text/css">
+		 <link href="./css/slick-theme.css" rel="stylesheet" type="text/css">
+		 
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<!-- 手机端 -->
+		<link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width:1198px)" />
+		<style type="text/css">
+		/* 	.banner{
+				width: 100%;
+				height: 615px;
+			
+			} */
+			.banner_box {
+			    width: 100%;
+			    height: 615px;
+			    position: relative;
+			}
+			
+			.banner {
+			    height: 615px;
+			    -webkit-background-size: cover;
+			    background-size: cover;
+			    background-position: center;
+			    display: block;
+			}
+			
+			.content_box_su{
+				margin: 0 auto;
+				max-width: 1300px;
+				padding: 0 150px;
+			}
+			.main .us .content_box_su p{
+				width: auto;
+				
+			}
+			@media screen and (max-width: 768px){
+				.header{
+					position: relative;
+					z-index: 999;
+					background: #fff;
+				}
+				.header .nav ul h1 {
+				    float: left;
+						margin-right: 0;
+				    /* margin-right: 100px; */
+				}
+				.banner_box,.banner {
+				   height: 150px;
+				}
+				.slick-dots{
+					bottom: 10px;
+				}
+				.content_box_su{
+					margin: 0 auto;
+					max-width: 1300px;
+					padding: 0 50px;
+				}
+				.main .core .content dl{
+					padding: 0 20px;
+				}
+				.main .core .content dl i{
+					display: none!important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 手机菜单 -->
+		<div class="m_nav" id="m_nav" style="display: none;">
+			<ul id="menu">
+				<li class="cur"><a href="index.html">首页</a></li>
+				<li id="m_nav_about">
+					<a href="about.html">关于我们 <img  src="images/m_more.png" /></a>
+					<div id="m_nav_in" style="display: none;">
+						<a href="about.html#A1">公司介绍</a>
+						<a href="about.html#A2">公司大事件</a>
+						<a href="about.html#A3">知识产权</a>
+						<a href="about.html#A4">信息安全</a>
+						<a href="about.html#A5">合作伙伴</a>
+					</div>
+					
+				</li>
+				<li><a href="kjfn.html">科技赋能</a></li>
+				<li><a href="my_fw.html">我们的服务</a></li>
+				<li><a href="zxns.html">招贤纳士</a></li>
+				<li><a href="lxwm.html">联系我们</a></li>
+			</ul>
+		</div>
+		<div class="shade" id="shade" style="display: none;">
+		</div>
+	<!-- ····················手机菜单 -->
+		
+		<div class="header center">
+			<!-- 导航 -->
+			
+			<div class="nav">
+				<ul>
+					<h1 class="logo"><a href="index.html" target="_top">&nbsp;&nbsp;<img src="images/logo.png"></a></h1>
+					<li class="cur"><a href="index.html" target="_blank">首页</a></li>
+					<li onmouseover="about_show('nav_in')" onmouseout="about_hidden('nav_in')" ><a href="about.html" target="_blank" id="tab_about">关于我们</a>
+						<!-- 二级导航 -->
+									<div id="nav_in">
+										<a href="about.html#A1">公司介绍</a>
+										<a href="about.html#A2">公司大事件</a>
+										<a href="about.html#A3">知识产权</a>
+										<a href="about.html#A4">信息安全</a>
+										<a href="about.html#A5">合作伙伴</a>
+									</div>
+					</li>
+					<li><a href="kjfn.html" target="_blank">科技赋能</a></li>
+					<li><a href="my_fw.html" target="_blank">我们的服务</a></li>
+					<li><a href="zxns.html" target="_blank">招贤纳士</a></li>
+					<li><a href="lxwm.html" target="_blank">联系我们</a></li>
+				</ul>
+				<!-- mobile -->
+				<p class="m_icon" id="m_icon">
+					<a href="#">
+						<img src="images/icon.png">
+					</a>
+				</p>
+			</div>
+			<!-- =======导航-->
+		</div>
+		
+		
+		
+		<!-- banner -->
+		<!-- <div class="banner">
+			<img src="images/banner1.png">
+		</div> -->
+		<div class="banner_box">
+			<div class="slider single-item">
+				<div>
+					<a href="" class="banner" style="background-image: url(./images/banner1.png);"></a>
+				</div>
+				<div>
+					<a href="" class="banner" style="background-image: url(./images/banner1.png);"></a>
+				</div>
+			</div>
+		</div>
+		<!-- 内容 -->
+		<div class="main">
+
+			<div class="us">
+				<!-- 标题 -->
+				<div class="title">
+					<p></p>关于我们<p></p>
+					<br />
+					<span>ABOUT US</span>
+				</div>
+				<!-- 内容 -->
+				<div class="content content_box_su">
+					<h1><img src="images/logo.png"></h1>
+					<p>
+						通过多元化产品设计及技术开发，服务于普惠的金融科技服务公司
+					</p>
+					<span>DIVERSIFIED PRODUCT DESIGN AND TECHDEVELOPMENT</span><br />
+					<i></i>
+				</div>
+			</div>
+			<!-- 关于我们 -->
+			<div class="core">
+				<div class="title">
+					<p></p>核心系统<p></p>
+					<br />
+					<span>CORE SYETEM</span>
+				</div>
+				<!-- 内容 -->
+				<div class="content center">
+					<dl>
+						<dt><img src="images/core_icon1.png"></dt>
+						<dd>
+							<h6>消费信贷全流程解决方案</h6>
+							<i></i>
+							<br />
+							<span>从综合授信管理到完整的贷中及贷后管理决策服务</span>
+							<br />
+							<a href="">查看详情</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/core_icon2.png"></dt>
+						<dd>
+							<h6>统一征信平台</h6>
+							<i></i>
+							<br />
+							<span>实现对接包括人行等20多家第三方征信数据公司</span>
+							<br />
+							<a href="">查看详情</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/core_icon3.png"></dt>
+						<dd>
+							<h6>中小信贷业务综合服务平台</h6>
+							<i></i>
+							<br />
+							<span>以Saas云服务方式为中小信贷机构提供一站式信贷业务管理</span>
+							<br />
+							<a href="">查看详情</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><img src="images/core_icon4.png"></dt>
+						<dd>
+							<h6>企业非金融应用领域</h6>
+							<i></i>
+							<br />
+							<span>为企业内部系统的账号及权限提供统一管理</span>
+							<br />
+							<!-- <br /> -->
+							<a href="">查看详情</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<!-- 核心系统 -->
+			<div class="shouhang">
+				<div>
+					<img src="images/man.png">
+				</div>
+				<div>
+					<h2><img src="images/logo1.png" ></h2>
+					<p >
+						&nbsp;&nbsp;&nbsp;2001年归国创业至今，一路走来，我们得到了来自所有客户、股东以及各界合作伙伴的鼎力支持，我们也因此获得了对中国金融银行业的深切了解、一个优秀的团队和多项成功的产品。我们将努力以国际的经验、先进的分析和卓越的产品、专业的服务，在多变和日益复杂的市场条件下，为客户创造价值，为自身所在的行业创造更大的发展空间。
+					</p>
+				</div>
+				
+				<div>
+					<h3>北京首航创始人 王征宇博士</h3><br /><br />
+					<span>美国芝加哥伊利诺伊大学统计学博士<br />
+						中南财经政法大学硕士生导师
+					</span>
+					<p>
+						王征宇博士曾在美国长期从事消费信贷管理，负责控制风险，提高价值的综合策略的制定，先后为众多国际著名金融机构提供咨询服务。 2001
+						年回国后开始了创业历程。公司为国内众多的全国性银行提供风险管理服务，为国内第一个征信服务机构以及全国性征信中心提供咨询服务，成为集风险评分、决策引擎、信贷策略技术为一体的国内消费信贷风险控制领先品牌。
+					</p>
+				</div>
+			</div>
+			<!-- 首航创始人 -->
+			<div class="mb_shouhang">
+				<h1><img src="images/logo1.png"></h1>
+				<p>
+					&nbsp;&nbsp;&nbsp;2001年归国创业至今，一路走来，我们得到了来自所有客户、股东以及各界合作伙伴的鼎力支持，我们也因此获得了对中国金融银行业的深切了解、一个优秀的团队和多项成功的产品。我们将努力以国际的经验、先进的分析和卓越的产品、专业的服务，在多变和日益复杂的市场条件下，为客户创造价值，为自身所在的行业创造更大的发展空间。
+				</p>
+				<h3>北京首航创始人 王征宇博士</h3><br /><br />
+				<span>
+				<img src="images/pic.png"><br/>
+					&nbsp;&nbsp;&nbsp; 王征宇博士曾在美国长期从事消费信贷管理，负责控制风险，提高价值的综合策略的制定，先后为众多国际著名金融机构提供咨询服务。 2001
+					年回国后开始了创业历程。公司为国内众多的全国性银行提供风险管理服务，为国内第一个征信服务机构以及全国性征信中心提供咨询服务，成为集风险评分、决策引擎、信贷策略技术为一体的国内消费信贷风险控制领先品牌。
+				</span>
+			</div>
+			<!-- 手机端 -->
+			
+
+			<div class="link center">
+				<div class="title">
+					<p></p>友情链接<p></p>
+					<br />
+					<span>LINK</span>
+				</div>
+				<div class="content">
+					<ul>
+						<li><a href="#"><img src="images/1.png"></a></li>
+						<li><a href="#"><img src="images/2.png"></a></li>
+						<li><a href="#"><img src="images/3.png"></a></li>
+						<li><a href="#"><img src="images/4.png"></a></li>
+						<li><a href="#"><img src="images/5.png"></a></li>
+						<li><a href="#"><img src="images/6.png"></a></li>
+						<li><a href="#"><img src="images/7.png"></a></li>
+						<li><a href="#"><img src="images/8.png"></a></li>
+						<li><a href="#"><img src="images/9.png"></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- 友情链接 -->
+			<div class="phone center">
+				<div class="left">
+					<a href="#">
+						<span>北京首航财务管理顾问有限公司</span><br />
+						http://www.cfchina.com.cn/
+					</a>
+				</div>
+				<div class="right">
+					邮编：100037&nbsp;&nbsp;&nbsp;
+					<br />
+					总计：010-68016922&nbsp;&nbsp;&nbsp;
+					<br />
+					传真：68011950&nbsp;&nbsp;&nbsp;
+					<a href="#">网址：www.cfchina.com.cn</a>
+				</div>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<br />
+			Copyright @ 2008 China Rapid Finance All richt reserved.<br /><br />版权所有︰北京首航财务管理顾问有限公司
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/slick.js"></script>
+<script src="js/public_su.js"></script>
+<script type="text/javascript">
+	
+		$("#m_icon").click(function(){
+			// $("#m_nav").show();
+			// $("#shade").show();	
+			$("#m_nav").toggle();
+			$("#shade").toggle();
+		})
+		
+		$("#shade").click(function(){
+			$("#m_nav").hide();
+			$("#shade").hide();
+		});	
+		
+		// 手机端二级菜单
+		$(function(){
+			// banner
+			$('.single-item').slick({
+				dots: true,
+				speed: 500,
+				arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 3000
+			});
+			
+			$("#menu li").click(function(){
+				$(this).children("#m_nav_in").toggle()
+				// $(this).children("#m_nav_in").show();
+				// $(this).children("#m_nav_in").hide();	
+			})		   
+		})	
+	
+	// 导航
+	function about_show(elementId){
+			document.getElementById("tab_about").style.background="#0858A5";
+			document.getElementById("tab_about").style.color="white";
+			document.getElementById(elementId).style.display="block";
+	}
+	function about_hidden(elementId){
+			document.getElementById("tab_about").style.background="white";
+			document.getElementById("tab_about").style.color="#333333";
+		document.getElementById(elementId).style.display="none";			
+	}
+	//============= 导航
+</script>

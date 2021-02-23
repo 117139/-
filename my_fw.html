@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>首航</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+		 id="viewport">
+		 
+		 <link href="./css/slick.css" rel="stylesheet" type="text/css">
+		 <link href="./css/slick-theme.css" rel="stylesheet" type="text/css">
+		 
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<!-- 手机端 -->
+		<link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width:1198px)" />
+		<link rel="stylesheet" href="./css/index_su.css">
+		<script type="text/javascript" src="js/vue.min.js"></script>
+	</head>
+	<body>
+		<!-- 手机菜单 -->
+		<div class="m_nav" id="m_nav" style="display: none;">
+			<ul id="menu">
+				<li><a href="index.html">首页</a></li>
+				<li id="m_nav_about">
+					<a href="about.html">关于我们 <img  src="images/m_more.png" /></a>
+					<div id="m_nav_in" style="display: none;">
+						<a href="about.html#A1">公司介绍</a>
+						<a href="about.html#A2">公司大事件</a>
+						<a href="about.html#A3">知识产权</a>
+						<a href="about.html#A4">信息安全</a>
+						<a href="about.html#A5">合作伙伴</a>
+					</div>
+					
+				</li>
+				<li><a href="kjfn.html">科技赋能</a></li>
+				<li class="cur"><a href="my_fw.html">我们的服务</a></li>
+				<li><a href="zxns.html">招贤纳士</a></li>
+				<li><a href="lxwm.html">联系我们</a></li>
+			</ul>
+		</div>
+		<div class="shade" id="shade" style="display: none;">
+		</div>
+	<!-- ····················手机菜单 -->
+		
+		<div class="header center">
+			<!-- 导航 -->
+			
+			<div class="nav">
+				<ul>
+					<h1 class="logo"><a href="index.html" target="_top">&nbsp;&nbsp;<img src="images/logo.png"></a></h1>
+					<li><a href="index.html" target="_blank">首页</a></li>
+					<li onmouseover="about_show('nav_in')" onmouseout="about_hidden('nav_in')" ><a href="about.html" target="_blank" id="tab_about">关于我们</a>
+						<!-- 二级导航 -->
+									<div id="nav_in">
+										<a href="about.html#A1">公司介绍</a>
+										<a href="about.html#A2">公司大事件</a>
+										<a href="about.html#A3">知识产权</a>
+										<a href="about.html#A4">信息安全</a>
+										<a href="about.html#A5">合作伙伴</a>
+									</div>
+					</li>
+					<li><a href="kjfn.html" target="_blank">科技赋能</a></li>
+					<li class="cur"><a href="my_fw.html" target="_blank">我们的服务</a></li>
+					<li><a href="zxns.html" target="_blank">招贤纳士</a></li>
+					<li><a href="lxwm.html" target="_blank">联系我们</a></li>
+				</ul>
+				<!-- mobile -->
+				<p class="m_icon" id="m_icon">
+					<a href="#">
+						<img src="images/icon.png">
+					</a>
+				</p>
+			</div>
+			<!-- =======导航-->
+		</div>
+		<div id="wrap">
+			<div class="banner_su" style="background-image: url(images/myfw_banner_02.jpg);"></div>
+			<div class="myfw_list_tit_box">
+				<div class="myfw_list_tit">我们的服务</div>
+				<div class="myfw_list_tit1">OUR SERVICES</div>
+			</div>
+			<div class="myfw_bg" style="background: #f7f7f7;">
+				<div class="dis_flex w1200 myfw_li aic">
+					<div class="myfw_li_msg">
+						<div class="myfw_li_tit">数据分析服务</div>
+						<div class="myfw_li_tit_en">DATA ANALYSIS SERVICES</div>
+						<div class="myfw_li_tit_text">
+							首航数据分析团队的技术积累来自多年国外发达市场的先进经验，同时也来自长期对中国市场以及相关管理
+							流程的深刻理解。
+						</div>
+						<div class="myfw_li_tit_text">
+							首航数据分析团队的技术积累来自多年国外发达市场的先进经验，同时也来自长期对中国市场以及相关管理
+							流程的深刻理解。
+						</div>
+					</div>
+					<img src="images/myfw_05.jpg" >
+				</div>
+			</div>
+			<div class="myfw_bg" style="background: #fff;">
+				<div class="dis_flex w1200 myfw_li aic">
+					<img src="images/myfw_09.jpg" >
+					<div class="myfw_li_msg" style="max-width: 600px;">
+						<div class="myfw_li_tit">系统开发实施服务</div>
+						<div class="myfw_li_tit_en">SYSTEM DEVELOPMENT AND IMPLEMENTION SERSIVE</div>
+						<div class="myfw_li_tit_text">
+							首航以专业的软件开发技术和项目管理方法为基础，能够深刻理解客户的需求，快速、有效地
+							为客户提供高质量的软件项目外包服务。
+						</div>
+						<div class="myfw_li_tit_text">
+							首航目前在贷前授信申请、贷中额度管理、贷后催收、风控决策、征信变量加工等领域具积累了深厚的系统开发经验。
+							首航能够站在行业高度对系统架构进行统一规划，
+							设计开发满足当前业务需求的应用系统，同时能以业务预期发展来指导IT规划，使系统建设满足未来若干年的发展需要。
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="myfw_bg" style="background: #f7f7f7;padding-top: 40px;padding-bottom: 20px;">
+				<div class="dis_flex_c w1200 myfw_li aic">
+					<div class="myfw_li_tit dis_flex ju_c">催收云服务</div>
+					<div class="myfw_li_tit_en  dis_flex ju_c">COLLECTION OF CLOUD SERVICES</div>
+					<div class="myfw_li_tit_text  dis_flex ju_c" style="text-align: center;">
+						首航开发的不良资产处置平台是以SaaS云服务方式提供一站式催收服务。该平台主要有两类用户，一类是债权委托机构，另一类是催收机构和律所。这两类机构用户在
+						平台注册认证后，通过云服务提供的功能简单配置和部署后即可享受平台提供的相应服务。平台具备严格的安全机制，确保不同机构只能访问本机构和用户权限范
+						围内的功能和数据。
+					</div>
+				</div>
+				<div class="dis_flex w1200 myfw_li aic">
+					<div class="myfw_li_msg" style="max-width: 600px;">
+						
+						<div class="myfw_li_tit_text">
+							合规作业：通过平台成熟的作业流程，有效保障催收业务安全、规范的进行。
+						</div>
+						<div class="myfw_li_tit_text">
+							高效管理：自定义最优策略，实现灵活、高效的案件分配机制，提高催收工作效率
+						</div>
+						<div class="myfw_li_tit_text">
+							节约成本：企业无需自行搭建和维护系统，即可快速配置和部署适合本企业的催收作业平台。
+						</div>
+					</div>
+					<img src="images/myfw_13.jpg" >
+				</div>
+			</div>
+			<div class="myfw_bg" style="background: #fff;padding-top: 40px;padding-bottom: 20px;">
+				<div class="dis_flex_c w1200 myfw_li aic">
+					<div class="myfw_li_tit dis_flex ju_c">信贷业务云服务</div>
+					<div class="myfw_li_tit_en  dis_flex ju_c">CLOUD SERVICE OF CREDIT BUSINESS</div>
+					<div class="myfw_li_tit_text  dis_flex ju_c" style="text-align: center;">
+						首航开发的信贷业务综合服务平台以SaaS云服务方式为中小信贷机构提供一站式信贷业务管理。信贷机构只需要租用平台提供的服务，即可快速构建一套符合监管要求和自
+						身需求的轻量级信贷业务系统，平台提供包括申请进件、授信审批、风控决策、贷后催收等多个业务模块，对信贷业务生命周期的各个环节进行管理。
+						这种服务租用的模式，使信贷机构避免在系统开发建设、系统维护和服务器资源方面投入过高成本，帮助信贷机构更专注于自身业务，快速开展相关业务，更有效的
+						做好风险管理和客户服务工作。使用这项服务，为中小信贷机构、催收机构实现了如下效益：
+					</div>
+				</div>
+				<div class="dis_flex w1200 myfw_li aic">
+					<img src="images/myfw_17.jpg" >
+					<div class="myfw_li_msg" style="max-width: 600px;">
+						
+						<div class="myfw_li_tit_text">
+							合规作业：通过平台成熟的作业流程，有效保障催收业务安全、规范的进行。
+						</div>
+						<div class="myfw_li_tit_text">
+							高效管理：自定义最优策略，实现灵活、高效的案件分配机制，提高催收工作效率
+						</div>
+						<div class="myfw_li_tit_text">
+							节约成本：企业无需自行搭建和维护系统，即可快速配置和部署适合本企业的催收作业平台。
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="myfw_list_tit_box" style="padding: 20px 0;">
+				<div class="myfw_list_tit">合作案例</div>
+				<div class="myfw_list_tit1">COOPERATION CASES</div>
+			</div>
+			<div class="myfw_bg" style="background: #f7f7f7;">
+				<div class="w1200 dis_flex hzal_list">
+					<div class="hzal_li">
+						<div class="hzal_bg">
+							<div class="hzal_box">
+								<div class="hzal_tit">某国有银行--建设银行</div>
+								<div class="hzal_jj">基于北京首航申请评分的自动审批体系，包括授信策略和额度策略，建立反欺诈规则，优化业务流程</div>
+								<ul class="hzal_ul">
+									<li>审批通过率提高了12.3%，风险调整后的收益率提高了35%，同时，违约率降低了2.48%</li>
+									<li>审批成本降低了52.9%，同时，申请欺诈发生率降低了33%</li>
+									<li>建立了新的、更加有效的欺诈防范策略和自动审批体系</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="hzal_li">
+						<div class="hzal_bg">
+							<div class="hzal_box">
+								<div class="hzal_tit">某商业银行--民生银行</div>
+								<div class="hzal_jj">自由北京首航负责开发申请阶段风险、收入、反欺诈、授信策略、初始额度的评分卡上线后：</div>
+								<ul class="hzal_ul">
+									<li>提升了民生银行信用卡中心申请阶段风险管理的能力和水平，量化风险。</li>
+									<li>提高决策一致性，提高工作效率。</li>
+									<li>提高申请阶段额度管理策略开发的科学性。</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="hzal_li">
+						<div class="hzal_bg">
+							<div class="hzal_box">
+								<div class="hzal_tit">某消费金融公司--中银消费</div>
+								<div class="hzal_jj">
+									北京首航为其建立向前延伸到网点的前端申请、后端征信审批、额度授信的系统。
+									提供中途授信、一般贷款等消费金融特色业务提供网上多种申请途径的处理
+								</div>
+								<ul class="hzal_ul">
+									<li>有效进行审批环节和额度管理的风险控制及操作一致性。</li>
+									<li>提高业务人员工作效率，提升产量。优化业务环节，缩短决策周期。</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="hzal_li">
+						<div class="hzal_bg">
+							<div class="hzal_box">
+								<div class="hzal_tit">某城商银行--华夏银行</div>
+								<div class="hzal_jj">
+									在北京首航消费金融信贷整体技术支持和7X24运营支持下，运营、审批效率获得大幅提升：
+								</div>
+								<ul class="hzal_ul">
+									<li>提高业务人员工作效率，提升产量。优化业务环节，缩短决策周期。</li>
+									<li>系统决策有效进行审批环节和额度管理的风险控制及操作一致性。</li>
+									<li>提升前端授信和后端账户管理的客服质量。</li>
+									<li>通过额度调整有效提高额度使用，控制风险，优化客户价值</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="hzal_li">
+						<div class="hzal_bg">
+							<div class="hzal_box">
+								<div class="hzal_tit">某金融机构</div>
+								<div class="hzal_jj">
+									成功开发实施申请审批处理系统，实现贷前借款人资料审核、系统自动决策、人工审批流程一体化，大大提升了授信审批效率，
+									规范了作业流程，加强了风险控制。
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="hzal_li">
+						<div class="hzal_bg">
+							<div class="hzal_box">
+								<div class="hzal_tit">某金融机构</div>
+								<div class="hzal_jj">
+									成功开发实施消费信贷核心业务系统，实现了对客户、账户和交易级账务数据的高效处理，
+									同时提供了产品差异化定价机制，帮助该机构实现数百万笔放款交易，获取大量优质借款客户。
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="hzal_li">
+						<div class="hzal_bg">
+							<div class="hzal_box">
+								<div class="hzal_tit">某金融机构</div>
+								<div class="hzal_jj">
+									成功开发实施催收管理系统，通过灵活的案件分配机制、智能的催收策略、以及及时准确的监控统计报告，
+									帮助该机构规范了作业流程，对拖欠客户有效进行分群 ，排队和催收资源分配，达到最大程度的收回欠款，提升了催收效率和催收效果。
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<br />
+			Copyright @ 2008 China Rapid Finance All richt reserved.<br /><br />版权所有︰北京首航财务管理顾问有限公司
+		</div>
+	</body>
+</html>
+<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/slick.js"></script>
+<script src="js/public_su.js"></script>
+<script type="text/javascript">
+	
+	var vm = new Vue({
+		el: "#wrap",
+		data: {
+			cur: 0,
+		},
+		created: function() {
+	
+		},
+		mounted: function() {
+	
+		},
+		methods: {
+	
+		}
+	});
+	
+	function setcur(num){
+		// alert(num)
+		vm.cur=num
+		if(num==0){
+			window.location.href="#fw"
+		}
+		if(num==1){
+			window.location.href="#lxfs"
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+		$("#m_icon").click(function(){
+			// $("#m_nav").show();
+			// $("#shade").show();	
+			$("#m_nav").toggle();
+			$("#shade").toggle();
+		})
+		
+		$("#shade").click(function(){
+			$("#m_nav").hide();
+			$("#shade").hide();
+		});	
+		
+		// 手机端二级菜单
+		$(function(){
+			// banner
+			$('.single-item').slick({
+				dots: true,
+				speed: 500,
+				arrows: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 3000
+			});
+			
+			$("#menu li").click(function(){
+				$(this).children("#m_nav_in").toggle()
+				// $(this).children("#m_nav_in").show();
+				// $(this).children("#m_nav_in").hide();	
+			})		   
+		})	
+	
+	// 导航
+	function about_show(elementId){
+			document.getElementById("tab_about").style.background="#0858A5";
+			document.getElementById("tab_about").style.color="white";
+			document.getElementById(elementId).style.display="block";
+	}
+	function about_hidden(elementId){
+			document.getElementById("tab_about").style.background="white";
+			document.getElementById("tab_about").style.color="#333333";
+		document.getElementById(elementId).style.display="none";			
+	}
+	//============= 导航
+</script>
