@@ -72,45 +72,177 @@
 			</div>
 			<!-- =======导航-->
 		</div>
-		<div id="wrap">
-			<div class="banner_su" style="background-image: url(images/lxwm_02.jpg);"></div>
-			<div class="lxwm_box w1200">
-				<div class="lxwm_box_tabs dis_flex ju_c ais">
-					<a class="lxwm_box_tabs_li dis_flex aic" :class="cur==0?'cur':''" onclick="setcur(0)">服务通道</a>
-					<a class="lxwm_box_tabs_li dis_flex aic" :class="cur==1?'cur':''" onclick="setcur(1)">联系方式</a>
-				</div>
-				<div id="fw" class="fwtd_tit dis_flex aic ju_c">
-					服务通道
-				</div>
-				<div class="fwlist dis_flex ju_a">
-					<div class="fwli">
-						<img class="fwli_img" src="images/lxwm_05.jpg" >
-						<p class="fwli_p">反馈中心</p>
-						<div style="font-size: 12px;color: #666;">	我们将在1-2个工作日内处理，感谢您的支持</div>
+		<div id="wrap" v-cloak>
+			<div class="banner_su" style="background-image: url(./images/kjfn_banner_02.jpg);"></div>
+			
+			<div class="w1200 dis_flex ju_b kjfn_box" style="padding: 20px 0;">
+				<div class="kjfn_l">
+					<div class="kjfn_l_li" :class="d1_cur==0?'cur':''" >
+						<a class="kjfn_l_li_t dis_flex aic ju_b" href="kjfn.html?d1_cur=0&tit1=科技赋能-机构业务">科技赋能-机构业务</a>
+						<!-- <div class="kjfn_l_li_t dis_flex aic ju_b" @click="d1_fuc(0,'科技赋能-机构业务')">科技赋能-机构业务</div> -->
 					</div>
-					<div class="fwli">
-						<img class="fwli_img" src="images/lxwm_07.jpg" >
-						<p class="fwli_p">热线电话</p>
-						<div class="fwli_tel">
-							总计：010-68016922
-							<br>传真：68011950
-							<br>网址：www.cfchina.com.cn
+					<div class="kjfn_l_li" :class="d1_cur==1?'cur':''">
+						<a class="kjfn_l_li_t dis_flex aic ju_b" href="kjfn.html?d1_cur=1&d2_cur=0&tit1=我们的核心技术&tit2=核心技术概述" >
+							我们的核心技术
+							<i v-if="d1_cur==1" class="iconfont icon-off"></i>
+							<i v-else class="iconfont icon-next-m"></i>
+						</a>
+						<!-- <div class="kjfn_l_li_t dis_flex aic ju_b" @click="d1_fuc(1,'我们的核心技术','消费信贷全流程解决方案')" >
+							我们的核心技术
+							<i v-if="d1_cur==1" class="iconfont icon-off"></i>
+							<i v-else class="iconfont icon-next-m"></i>
+						</div> -->
+						<div v-if="d1_cur==1">
+							<a class="kjfn_d2_li" :class="d2_cur==0?'cur':''" href="kjfn.html?d1_cur=1&d2_cur=0&tit1=我们的核心技术&tit2=核心技术概述">核心技术概述</a>
+							<a class="kjfn_d2_li" :class="d2_cur==1?'cur':''" href="kjfn.html?d1_cur=1&d2_cur=1&tit1=我们的核心技术&tit2=自动决策技术（ADT）">自动决策技术（ADT）</a>
+							<a class="kjfn_d2_li" :class="d2_cur==2?'cur':''" href="kjfn.html?d1_cur=1&d2_cur=2&tit1=我们的核心技术&tit2=大数据信用评分技术">大数据信用评分技术</a>
+							<a class="kjfn_d2_li" :class="d2_cur==3?'cur':''" href="kjfn.html?d1_cur=1&d2_cur=3&tit1=我们的核心技术&tit2=风险定价技术">风险定价技术</a>
+							<a class="kjfn_d2_li" :class="d2_cur==4?'cur':''" href="kjfn.html?d1_cur=1&d2_cur=4&tit1=我们的核心技术&tit2=预测筛选机制（PST)">预测筛选机制（PST)</a>
+							
+							<!-- <div class="kjfn_d2_li" :class="d2_cur==0?'cur':''" @click="d2_fuc(0,'消费信贷全流程解决方案')">消费信贷全流程解决方案</div>
+							<div class="kjfn_d2_li" :class="d2_cur==1?'cur':''" @click="d2_fuc(1,'中小信贷业务综合服务平台')">中小信贷业务综合服务平台</div>
+							<div class="kjfn_d2_li" :class="d2_cur==2?'cur':''" @click="d2_fuc(2,'统一征信平台')">统一征信平台</div>
+							<div class="kjfn_d2_li" :class="d2_cur==3?'cur':''" @click="d2_fuc(3,'企业非金融应用领域')">企业非金融应用领域</div> -->
+						</div>
+					</div>
+					<div class="kjfn_l_li" :class="d1_cur==2?'cur':''">
+						<a class="kjfn_l_li_t dis_flex aic ju_b" href="kjfn.html?d1_cur=2&d2_cur=0&tit1=核心系统&tit2=消费信贷全流程解决方案" >
+							核心系统
+							<i v-if="d1_cur==2" class="iconfont icon-off"></i>
+							<i v-else class="iconfont icon-next-m"></i>
+						</a>
+						<!-- <div class="kjfn_l_li_t dis_flex aic ju_b" @click="d1_fuc(2,'核心系统','消费信贷全流程解决方案')" >
+							核心系统
+							<i v-if="d1_cur==2" class="iconfont icon-off"></i>
+							<i v-else class="iconfont icon-next-m"></i>
+						</div> -->
+						
+						<div v-if="d1_cur==2">
+							<a class="kjfn_d2_li" :class="d2_cur==0?'cur':''" href="kjfn.html?d1_cur=2&d2_cur=0&tit1=核心系统&tit2=消费信贷全流程解决方案">消费信贷全流程解决方案</a>
+							<a class="kjfn_d2_li" :class="d2_cur==1?'cur':''" href="kjfn.html?d1_cur=2&d2_cur=1&tit1=核心系统&tit2=中小信贷业务综合服务平台">中小信贷业务综合服务平台</a>
+							<a class="kjfn_d2_li" :class="d2_cur==2?'cur':''" href="kjfn.html?d1_cur=2&d2_cur=2&tit1=核心系统&tit2=统一征信平台">统一征信平台</a>
+							<a class="kjfn_d2_li" :class="d2_cur==3?'cur':''" href="kjfn.html?d1_cur=2&d2_cur=3&tit1=核心系统&tit2=企业非金融应用领域">企业非金融应用领域</a>
+							
+							<!-- <div class="kjfn_d2_li" :class="d2_cur==0?'cur':''" @click="d2_fuc(0,'消费信贷全流程解决方案')">消费信贷全流程解决方案</div>
+							<div class="kjfn_d2_li" :class="d2_cur==1?'cur':''" @click="d2_fuc(1,'中小信贷业务综合服务平台')">中小信贷业务综合服务平台</div>
+							<div class="kjfn_d2_li" :class="d2_cur==2?'cur':''" @click="d2_fuc(2,'统一征信平台')">统一征信平台</div>
+							<div class="kjfn_d2_li" :class="d2_cur==3?'cur':''" @click="d2_fuc(3,'企业非金融应用领域')">企业非金融应用领域</div> -->
 						</div>
 					</div>
 				</div>
-				
-				<div id="lxfs" class="fwtd_tit dis_flex aic ju_c">
-					联系方式
+				<div class="kjfn_r">
+					<div class="kjfn_r_tit dis_flex aic ju_b">
+						<div class="dis_flex aic fw_w"><img class="kjfn_icon" src="images/kjfn_icon.png" />{{tit1}} {{tit2?'>':''}} <span v-if="tit2">{{tit2}}</span></div>
+						<a v-if="d1_cur==2&&kjfn_xq==true" class="kjfnxq_back" href="javascript:history.go(-1);">返回上一级</a>
+					</div>
+					<div v-if="d1_cur==0" class="kjfn_r_inr">
+						<img src="images/kjfn_img_05.jpg" >
+						<div style="font-size: 18px;color: #333;margin-top: 20px;text-indent: 2em;">
+								北京首航为金融/非金融机构提供多元化产品设计及技术开发服务，涵盖底层技术、系统应用、业务运营等。
+							基于各类业务场景、渠道来源及产品形态，根据合作机构要求搭建覆盖贷前、贷中和贷后的信贷产品设计、整体技术输出、或定制个性化模块化解决方案，帮助合作机构有效提升风控能力，优化业务风险表现。
+							帮助合作机构在流量、消费场景、信贷风险控制上充分挖掘目标群体的消费潜力，满足信用白户的信贷需求，实现业务规模的大幅增长。
+						</div>
+					</div>
+					<div v-if="d1_cur==1&&kjfn_xq==true||d1_cur==2&&kjfn_xq==true" class="kjfn_r_inr fwb_box">
+						<img v-if="d1_cur==1" src="images/kjfnxq1_03.jpg" >
+						<img v-if="d1_cur==2" src="images/kjfnxq2_03.jpg" >
+						
+					</div>
+					<div v-if="d1_cur==2&&kjfn_xq!=true" class="kjfn_r_list dis_flex">
+						<div class="kjfn_r_li">
+							<div class="kjfn_r_li_box" style="background-image: url(images/kjfn_libg_03.jpg);">
+								<div class="kjfn_r_li_bg">
+									<div class="kjfn_r_li_d1">核心系统</div>
+									<div class="kjfn_r_li_d2">APS申请处理系统</div>
+									<div class="kjfn_r_li_d3"></div>
+									<!-- id是详情id -->
+									<a class="kjfn_r_li_d4 dis_flex aic ju_c" href="kjfn.html?d1_cur=2&d2_cur=0&tit1=核心系统&tit2=消费信贷全流程解决方案&id=1">查看详情</a>
+								</div>
+							</div>
+						</div>
+						<div class="kjfn_r_li">
+							<div class="kjfn_r_li_box" style="background-image: url(images/kjfn_libg_03.jpg);">
+								<div class="kjfn_r_li_bg">
+									<div class="kjfn_r_li_d1">核心系统</div>
+									<div class="kjfn_r_li_d2">APS申请处理系统</div>
+									<div class="kjfn_r_li_d3"></div>
+									<!-- id是详情id -->
+									<a class="kjfn_r_li_d4 dis_flex aic ju_c" href="kjfn.html?d1_cur=2&d2_cur=0&tit1=核心系统&tit2=消费信贷全流程解决方案&id=1">查看详情</a>
+								</div>
+							</div>
+						</div>
+						<div class="kjfn_r_li">
+							<div class="kjfn_r_li_box" style="background-image: url(images/kjfn_libg_03.jpg);">
+								<div class="kjfn_r_li_bg">
+									<div class="kjfn_r_li_d1">核心系统</div>
+									<div class="kjfn_r_li_d2">APS申请处理系统</div>
+									<div class="kjfn_r_li_d3"></div>
+									<!-- id是详情id -->
+									<a class="kjfn_r_li_d4 dis_flex aic ju_c" href="kjfn.html?d1_cur=2&d2_cur=0&tit1=核心系统&tit2=消费信贷全流程解决方案&id=1">查看详情</a>
+								</div>
+							</div>
+						</div>
+						<div class="kjfn_r_li">
+							<div class="kjfn_r_li_box" style="background-image: url(images/kjfn_libg_03.jpg);">
+								<div class="kjfn_r_li_bg">
+									<div class="kjfn_r_li_d1">核心系统</div>
+									<div class="kjfn_r_li_d2">APS申请处理系统</div>
+									<div class="kjfn_r_li_d3"></div>
+									<!-- id是详情id -->
+									<a class="kjfn_r_li_d4 dis_flex aic ju_c" href="kjfn.html?d1_cur=2&d2_cur=0&tit1=核心系统&tit2=消费信贷全流程解决方案&id=1">查看详情</a>
+								</div>
+							</div>
+						</div>
+						<div class="kjfn_r_li">
+							<div class="kjfn_r_li_box" style="background-image: url(images/kjfn_libg_03.jpg);">
+								<div class="kjfn_r_li_bg">
+									<div class="kjfn_r_li_d1">核心系统</div>
+									<div class="kjfn_r_li_d2">APS申请处理系统</div>
+									<div class="kjfn_r_li_d3"></div>
+									<!-- id是详情id -->
+									<a class="kjfn_r_li_d4 dis_flex aic ju_c" href="kjfn.html?d1_cur=2&d2_cur=0&tit1=核心系统&tit2=消费信贷全流程解决方案&id=1">查看详情</a>
+								</div>
+							</div>
+						</div>
+						<div class="kjfn_r_li">
+							<div class="kjfn_r_li_box" style="background-image: url(images/kjfn_libg_03.jpg);">
+								<div class="kjfn_r_li_bg">
+									<div class="kjfn_r_li_d1">核心系统</div>
+									<div class="kjfn_r_li_d2">APS申请处理系统</div>
+									<div class="kjfn_r_li_d3"></div>
+									<!-- id是详情id -->
+									<a class="kjfn_r_li_d4 dis_flex aic ju_c" href="kjfn.html?d1_cur=2&d2_cur=0&tit1=核心系统&tit2=消费信贷全流程解决方案&id=1">查看详情</a>
+								</div>
+							</div>
+						</div>
+						<div class="kjfn_r_li">
+							<div class="kjfn_r_li_box" style="background-image: url(images/kjfn_libg_03.jpg);">
+								<div class="kjfn_r_li_bg">
+									<div class="kjfn_r_li_d1">核心系统</div>
+									<div class="kjfn_r_li_d2">APS申请处理系统</div>
+									<div class="kjfn_r_li_d3"></div>
+									<!-- id是详情id -->
+									<a class="kjfn_r_li_d4 dis_flex aic ju_c" href="kjfn.html?d1_cur=2&d2_cur=0&tit1=核心系统&tit2=消费信贷全流程解决方案&id=1">查看详情</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="b_map" style="background-image: url(images/lxwm_12.jpg);"></div>
-				<div class="lxwm_type">
-					http://www.cfchina.com.cn/
-					<br>邮编：100037
+			</div>
+			<div class="w1200 dis_flex aic ju_b b_yl">
+				<a href="http://www.cfchina.com.cn/">
+					<div class="b_yl_name">北京首航财务管理顾问有限公司</div>
+					<div class="b_yl_url">http://www.cfchina.com.cn/</div>
+				</a>
+				<div class="b_yl_xxx">
+					邮编：100037
 					<br>总计：010-68016922
 					<br>传真：68011950
 					<br>网址：www.cfchina.com.cn
 				</div>
 			</div>
+			
+			
 		</div>
 		<!-- 底部 -->
 		<div class="footer">
@@ -127,7 +259,12 @@
 	var vm = new Vue({
 		el: "#wrap",
 		data: {
-			cur: 0,
+			d1_cur: 0,
+			d2_cur:0,
+			tit1:'科技赋能-机构业务',
+			tit2:'',
+			kjfn_xq:false,
+			xq_id:''  //详情id
 		},
 		created: function() {
 	
@@ -140,15 +277,56 @@
 		}
 	});
 	
-	function setcur(num){
+	$(function(){
+		vm.d1_cur=getNowCanshu().d1_cur||0
+		vm.d2_cur=getNowCanshu().d2_cur||0
+		if(getNowCanshu().tit1){
+			vm.tit1=decodeURIComponent(getNowCanshu().tit1)
+		}else{
+			vm.tit1='科技赋能-机构业务'
+		}
+		if(getNowCanshu().tit2){
+			vm.tit2=decodeURIComponent(getNowCanshu().tit2)
+		}
+		if(vm.d1_cur==1){
+			vm.kjfn_xq=true
+		}
+		if(getNowCanshu().id){
+			vm.kjfn_xq=true
+			vm.xq_id=getNowCanshu().id
+		}
+		// banner
+		$('.single-item').slick({
+			dots: true,
+			speed: 500,
+			arrows: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+			autoplaySpeed: 3000
+		});
+		// 手机端二级菜单
+		$("#menu li").click(function(){
+			$(this).children("#m_nav_in").toggle()
+			// $(this).children("#m_nav_in").show();
+			// $(this).children("#m_nav_in").hide();	
+		})		   
+	})	
+	function d1_fuc(num,tit1,tit2){
 		// alert(num)
-		vm.cur=num
-		if(num==0){
-			window.location.href="#fw"
+		vm.d1_cur=num
+		vm.d2_cur=0
+		vm.tit1=tit1
+		vm.tit2=tit2||''
+		if(vm.d1_cur==1){
+			vm.kjfn_xq=true
 		}
-		if(num==1){
-			window.location.href="#lxfs"
-		}
+	}
+	function d2_fuc(num,tit2){
+		
+		vm.d2_cur=num
+		vm.tit2=tit2
+		
 	}
 	
 	
@@ -169,25 +347,7 @@
 			$("#shade").hide();
 		});	
 		
-		// 手机端二级菜单
-		$(function(){
-			// banner
-			$('.single-item').slick({
-				dots: true,
-				speed: 500,
-				arrows: false,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				autoplay: true,
-				autoplaySpeed: 3000
-			});
-			
-			$("#menu li").click(function(){
-				$(this).children("#m_nav_in").toggle()
-				// $(this).children("#m_nav_in").show();
-				// $(this).children("#m_nav_in").hide();	
-			})		   
-		})	
+		
 	
 	// 导航
 	function about_show(elementId){
@@ -200,5 +360,5 @@
 			document.getElementById("tab_about").style.color="#333333";
 		document.getElementById(elementId).style.display="none";			
 	}
-	//============= 导航
+	//============= 导航z
 </script>

@@ -10,10 +10,12 @@
 		 <link href="./css/slick-theme.css" rel="stylesheet" type="text/css">
 		 
 		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<link rel="stylesheet" type="text/css" href="./css/swiper.min.css" />
 		<!-- 手机端 -->
 		<link rel="stylesheet" type="text/css" href="css/mobile.css" media="(max-width:1198px)" />
 		<link rel="stylesheet" href="./css/index_su.css">
 		<script type="text/javascript" src="js/vue.min.js"></script>
+		<script src="js/swiper.min.js"></script>
 	</head>
 	<body>
 		<!-- 手机菜单 -->
@@ -74,39 +76,143 @@
 			<!-- =======导航-->
 		</div>
 		<div id="wrap">
-			<div class="banner_su" style="background-image: url(images/lxwm_02.jpg);"></div>
-			<div class="lxwm_box w1200">
-				<div class="lxwm_box_tabs dis_flex ju_c ais">
-					<a class="lxwm_box_tabs_li dis_flex aic" :class="cur==0?'cur':''" onclick="setcur(0)">服务通道</a>
-					<a class="lxwm_box_tabs_li dis_flex aic" :class="cur==1?'cur':''" onclick="setcur(1)">联系方式</a>
+			<div class="banner_su" style="background-image: url(images/about_img_02.jpg);"></div>
+			<div id="A1" class="w1200 dis_flex ju_b aic about_box">
+				<div class="about_l_tit">
+					关于我们
 				</div>
-				<div id="fw" class="fwtd_tit dis_flex aic ju_c">
-					服务通道
+				<div style="width: 700px;max-width: 100%;">
+					北京首航财务管理顾问有限公司（北京首航）是一家通过多元化产品设计及技术开发，服务于普惠的金融科技服务公司。 公司以研发和提供风险管理技术为主营业务，
+					为合作机构（金融资产管理公司、城商行、民营银行、农商行、农信社、村镇银行、外资法人银行、信托、金融租赁、财务公司、汽车金融、消费金融、互联网金融和垂直电商平台）
+					提供整个信贷风险架构的管理咨询服务，包括对信贷产品进行个性化设计、定制风控模型、算法及贷前、贷中、贷后的整套风险管理流程。
+					通过首航的客户筛选手段、风险评估方法、初始额度策略、额度调整策略、自动化决策系统、逾期催收策略、数据分析体系、风险政策方案、
+					风险管理流程等一整套完整的风险管理体系帮助合作机构在实现收益增长的同时，避免不必要的风险损失。
 				</div>
-				<div class="fwlist dis_flex ju_a">
-					<div class="fwli">
-						<img class="fwli_img" src="images/lxwm_05.jpg" >
-						<p class="fwli_p">反馈中心</p>
-						<div style="font-size: 12px;color: #666;">	我们将在1-2个工作日内处理，感谢您的支持</div>
+			</div>
+			<div class="w1200 dis_flex ju_a aic about_box" style="padding-top: 0;">
+				<div class="about_cp_li">
+					<div class="about_cp_li_i">
+						<i class="iconfont icon-bolt-circle-set"></i>
 					</div>
-					<div class="fwli">
-						<img class="fwli_img" src="images/lxwm_07.jpg" >
-						<p class="fwli_p">热线电话</p>
-						<div class="fwli_tel">
-							总计：010-68016922
-							<br>传真：68011950
-							<br>网址：www.cfchina.com.cn
+					<div class="about_cp_li_text">信用风险管理系统和相关软件产品</div>
+				</div>
+				<div class="about_cp_li">
+					<div class="about_cp_li_i">
+						<i class="iconfont icon-zixun"></i>
+					</div>
+					<div class="about_cp_li_text">为国内十多家银行及发卡机构提供专家咨询</div>
+				</div>
+				<div class="about_cp_li">
+					<div class="about_cp_li_i">
+						<i class="iconfont icon-_H_"></i>
+					</div>
+					<div class="about_cp_li_text">围绕移动互联网渠道的精确营销 </div>
+				</div>
+			</div>
+			<div class="banner_su banner_su1" style="background-image: url(images/about_img_14.jpg);"></div>
+			<div id="A2" class="myfw_list_tit_box" style="padding: 30px 0;">
+				<div class="myfw_list_tit">公司大事件</div>
+				<div class="myfw_list_tit1">COMPANY EVENTS</div>
+			</div>
+			<div class="w1200 gsdsj_box">
+				
+				<div class="gsdsj_list">
+					<div class="gsdsj_li">
+						<div class="gsdsj_li_box">
+							<img src="images/about_img_23.jpg" >
+							<div class="gsdsj_li_box_text">王征宇博士等一批留美归国的信用风险管理专家开始了首航的创业历程</div>
+							<div class="gsdsj_li_box_year">2001</div>
+						</div>
+					</div>
+					<div class="gsdsj_li">
+						<div class="gsdsj_li_box">
+							<img src="images/about_img_20.jpg" >
+							<div class="gsdsj_li_box_text">参与央行《中国征信管理条例（草案）》专家组起草工作与上海资信合作中国第一个“征信数据综合评估”项目</div>
+							<div class="gsdsj_li_box_year">2002</div>
+						</div>
+					</div>
+					<div class="gsdsj_li">
+						<div class="gsdsj_li_box">
+							<img src="images/about_img_28.jpg" >
+							<div class="gsdsj_li_box_text">为国内50%以上的全国性银行等金融机构，超过一亿张信用卡发型提供信用风险官理服务</div>
+							<div class="gsdsj_li_box_year">2003-2010</div>
+						</div>
+					</div>
+					<div class="gsdsj_li">
+						<div class="gsdsj_li_box">
+							<img src="images/about_img_17.jpg" >
+							<div class="gsdsj_li_box_text">基于预测筛选技术发布收款小额信贷产品，为百万信贷人提供服务</div>
+							<div class="gsdsj_li_box_year">2014</div>
+						</div>
+					</div>
+					<div class="gsdsj_li">
+						<div class="gsdsj_li_box">
+							<img src="images/about_img_31.jpg" >
+							<div class="gsdsj_li_box_text">获得“高新技术企业证书”</div>
+							<div class="gsdsj_li_box_year">2016</div>
+						</div>
+					</div>
+					<div class="gsdsj_li">
+						<div class="gsdsj_li_box">
+							<img src="images/logo.png" style="margin-bottom: 30px;padding-top: 30px;">
+							<div class="gsdsj_li_box_text">通过多元化产品设计及技术开发，服务于普惠的金融科技服务公司</div>
+							<div class="gsdsj_li_box_year">2017年至今</div>
 						</div>
 					</div>
 				</div>
-				
-				<div id="lxfs" class="fwtd_tit dis_flex aic ju_c">
-					联系方式
+			</div>
+			<div class="w1200">
+				<ul class="about_tip">
+					<li>征信数据的第一个特征变量模型（上海资信）</li>
+					<li>信用卡第一个授信风险决策体系，提供基于授信管理、欺诈防范的评分策略决策系统（中国银行）</li>
+					<li>信用卡第一个额度、催收管理体系，提供基于行为评分、额度策略、催收策略的综合性决策管理平台（广发银行）</li>
+					<li>信用卡第一个引入征信报告自动处理的授信决策、申请欺诈防范体系，并从总行、分行同时测试获得成功的实施案例（建设银行）</li>
+					<li>信用卡第一个通过额度管理引入交易欺诈监控机制（Trigger strategy）的成功案例，账户处理量达千万以上（建设银行）</li>
+					<li>信用卡第一个在复杂的地区分群基础上，将风险管理、欺诈防范直接引入授信管理的成功案例（兴业银行）</li>
+				</ul>
+			</div>
+			<div id="A3" style="background: #F7F7F7;width: 100%;">
+				<div class="myfw_list_tit_box" style="padding: 30px 0 10PX;">
+					<div class="myfw_list_tit">知识产权</div>
+					<div class="myfw_list_tit1">INTELLECTUAL PROPERTY RIGHT</div>
 				</div>
-				<div class="b_map" style="background-image: url(images/lxwm_12.jpg);"></div>
-				<div class="lxwm_type">
-					http://www.cfchina.com.cn/
-					<br>邮编：100037
+				<div class="w1200 swiper_hz_box" >
+					<div class="swiper-button-prev swiper-button-prev2"></div>
+					<div class="swiper-container swiper_hz">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" v-for="item in 6" >
+								<a href="" class="hz_box_a"><img class="banner" src="images/about_img_37.jpg" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-next swiper-button-next2"></div>
+				</div>
+			</div>
+			<div id="A4" class="w1200 dis_flex aic ju_b">
+				<div style="width: 680px;max-width: 100%;">
+					<div class="xx_aq_tit">
+						信息安全与隐私保护
+					</div>
+					<ul class="hzal_ul">
+						<li>北京首航已获得网站可信认证与诚信认证，并通过国家信息安全等级保护第三级测评，在信息安全、系统管理、应急保障等方面达到国家标准.</li>
+						<li>北京首航将凡是涉及到保密性、完整性、可用性、可追溯性、真实性和可靠性保护等方面的科技和理论都纳入到信息安全研究范畴内。</li>
+						<li>北京首航在数据合规上有着严格的要求，包括但不限于在数据接入中要求数据类型符合国家相关法律、法规，坚决不采用不合规数据；所有数据均进行脱敏处理，也不存储用户隐私数据。重视用户数据隐私保护，所有数据均按照三级等保的安全标准进行处理。</li>
+						<li>自2001年在中国正式向国内金融机构提供信用风险管理咨询服务开始，北京首航就将信息安全摆在重要位置，持续投资于信息安全方面的建设。</li>
+					</ul>
+				</div>
+				<img src="images/about_img_56.jpg" style="width: 500px;">
+			</div>
+			<div id="A5" class="w1200">
+				<div class="A5_tit">风险管理技术输出合作伙伴：</div>
+				<img class="A5_img" src="images/about_img_60.jpg" alt="">
+			</div>
+			<div class="w1200 dis_flex aic ju_b b_yl">
+				<a href="http://www.cfchina.com.cn/">
+					<div class="b_yl_name">北京首航财务管理顾问有限公司</div>
+					<div class="b_yl_url">http://www.cfchina.com.cn/</div>
+				</a>
+				<div class="b_yl_xxx">
+					邮编：100037
 					<br>总计：010-68016922
 					<br>传真：68011950
 					<br>网址：www.cfchina.com.cn
@@ -169,7 +275,7 @@
 			$("#m_nav").hide();
 			$("#shade").hide();
 		});	
-		
+		var mySwiper
 		// 手机端二级菜单
 		$(function(){
 			// banner
@@ -187,9 +293,47 @@
 				$(this).children("#m_nav_in").toggle()
 				// $(this).children("#m_nav_in").show();
 				// $(this).children("#m_nav_in").hide();	
-			})		   
+			})		 
+				
+				
+			
+			if ($(window).width() < 800) {
+				mySwiper = new Swiper('.swiper_hz', {
+					loop: true,
+					slidesPerView: 2, //一行显示4个
+					slidesPerColumn: 1, //显示2行
+					// slidesOffsetBefore : 120,
+					// slidesPerColumnFill : 'row',
+					// navigation: {
+					// 	nextEl: '.swiper-button-next2',
+					// 	prevEl: '.swiper-button-prev2',
+					// },
+				})
+			}else{
+				mySwiper = new Swiper('.swiper_hz', {
+					loop: true,
+					slidesPerView: 5, //一行显示4个
+					slidesPerColumn: 1, //显示2行
+					slidesOffsetBefore : 120,
+					// slidesPerColumnFill : 'row',
+					navigation: {
+						nextEl: '.swiper-button-next2',
+						prevEl: '.swiper-button-prev2',
+					},
+				})	
+			}
 		})	
+	var setTime_obj = '';
+	$(window).resize(function() { //当浏览器大小变化时
+		clearTimeout(setTime_obj)
+		if ($(window).width() > 1200) {
+			setTime_obj = setTimeout(function() {
+				window.location.reload()
+			}, 200)
+		}
+		
 	
+	});
 	// 导航
 	function about_show(elementId){
 			document.getElementById("tab_about").style.background="#0858A5";
